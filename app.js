@@ -1,14 +1,31 @@
-angular.module('redditplica', [])
+angular.module('redditplica', ['ui.router'])
+.config([
+  '$stateProvider',
+  '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+      .state('home', {
+        url: '/home',
+        templateUrl: '/home.html',
+        controller: 'MainCtrl'
+      });
+
+    $urlRouterProvider.otherwise('home');
+}])
+
+.factory('posts', [function(){
+  var o = {
+    posts: []
+  };
+  return o;
+}])
+
 .controller('mainCtrl', [
   '$scope',
-  function($scope){
-    $scope.posts = [
-      {title: 'post 1', upvotes: 5},
-      {title: 'post 2', upvotes: 8},
-      {title: 'post 3', upvotes: 12},
-      {title: 'post 4', upvotes: 94},
-      {title: 'post 5', upvotes: 8}
-    ];
+  'posts',
+  function($scope, posts){
+    $scope.posts = posts.posts;
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {return;}
       else{
