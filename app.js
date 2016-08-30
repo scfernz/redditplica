@@ -11,11 +11,12 @@ angular.module('redditplica', ['ui.router'])
         controller: 'MainCtrl'
       });
 
+    $stateProvider
       .state('posts', {
         url: '/posts/{id}',
         templateUrl: '/posts.html',
         controller: 'PostsCtrl'
-      })
+      });
     $urlRouterProvider.otherwise('home');
 }])
 
@@ -41,9 +42,18 @@ angular.module('redditplica', ['ui.router'])
       ]
     });
     $scope.post = post.posts[$stateParams.id];
-}]);
+    $scope.addComment = function() {
+      if($scope.body === '') { return;}
+      $scope.post.comments.push({
+        body: $scope.body,
+        author: 'user',
+        upvotes: 0
+      });
+      $scope.body = '';
+    }
+}])
 
-.controller('mainCtrl', [
+.controller('MainCtrl', [
   '$scope',
   'posts',
   function($scope, posts){
