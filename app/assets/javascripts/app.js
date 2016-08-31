@@ -1,4 +1,4 @@
-angular.module('redditplica', ['ui.router'])
+angular.module('redditplica', ['ui.router', 'templates'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -7,14 +7,14 @@ angular.module('redditplica', ['ui.router'])
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: '/home.html',
+        templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
       });
 
     $stateProvider
       .state('posts', {
         url: '/posts/{id}',
-        templateUrl: '/posts.html',
+        templateUrl: 'posts/_posts.html',
         controller: 'PostsCtrl'
       });
     $urlRouterProvider.otherwise('home');
@@ -41,16 +41,16 @@ angular.module('redditplica', ['ui.router'])
         {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
       ]
     }),
-    $scope.post = post.posts[$stateParams.id]
-    // $scope.addComment = function() {
-    //   if($scope.body === '') { return;}
-    //   $scope.post.comments.push({
-    //     body: $scope.body,
-    //     author: 'user',
-    //     upvotes: 0
-    //   });
-    //   $scope.body = '';
-    // }
+    $scope.post = post.posts[$stateParams.id],
+    $scope.addComment = function() {
+      if($scope.body === '') { return;}
+      $scope.post.comments.push({
+        body: $scope.body,
+        author: 'user',
+        upvotes: 0
+      });
+      $scope.body = '';
+    }
 }])
 
 .controller('MainCtrl', [
