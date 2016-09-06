@@ -1,8 +1,8 @@
 angular.module('redditplica')
 
-.factory('posts', [function(){
+.factory('posts', function(){
   var obj = {
     posts: []
   };
   return obj;
-}]);
+});
