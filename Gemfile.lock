@@ -146,7 +146,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   ngannotate-rails
   rails (= 4.2.6)
-  responders (~> 2.0)
+  responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

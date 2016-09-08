@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
-  def post_params
-    params.require(:post).permit(:link, :title)
-  end
+  def post_params     params.require(:post).permit(:link, :title) end
 
   def index
     respond_with Post.all
