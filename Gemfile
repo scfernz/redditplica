@@ -16,8 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # angular
 gem 'angular-rails-templates'
 gem 'ngannotate-rails'
-#responders gem for respond_to
-gem 'responders', '~> 2.0'
+# responders gem
+gem 'responders'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -3,6 +3,8 @@ angular.module('redditplica')
 .controller('PostsCtrl', [
   '$scope', '$stateParams', 'posts',
   function($scope, $stateParams, posts) {
+    $scope.posts = posts.posts;
+    console.log($scope.posts);
     $scope.posts.push({
       title: $scope.title,
       link: $scope.link,
@@ -12,7 +14,7 @@ angular.module('redditplica')
         {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
       ]
     }),
-    $scope.post = post.posts[$stateParams.id],
+    $scope.post = posts.posts[$stateParams.id],
     $scope.addComment = function() {
       if($scope.body === '') { return;}
       $scope.post.comments.push({

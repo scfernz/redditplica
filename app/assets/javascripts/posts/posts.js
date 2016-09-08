@@ -1,16 +1,8 @@
 angular.module('redditplica')
 
-.factory('posts', [
-  '$http',
-  function($http){
-  o.getAll = function() {
-    return $http.get('/posts.json').success(function(data) {
-      angular.copy(data, o.posts);
-    });
+.factory('posts', function(){
+  var obj = {
+    posts: []
   };
-  // var o = {
-  //   posts: []
-  // };
-  //
-  return o;
-}]);
+  return obj;
+});
