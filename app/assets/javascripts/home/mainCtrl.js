@@ -8,7 +8,7 @@ angular.module('redditplica')
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {return;}
       else{
-        $scope.posts.push({title: $scope.title, link: $scope.link, upvotes: 0});
+        $scope.posts.push({title: $scope.title, link: $scope.link, upvotes: 0, comments: []});
         $scope.title = '';
         $scope.link = '';
       }
