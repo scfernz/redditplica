@@ -11,5 +11,10 @@ function($http){
 			angular.copy(data, post);
 		});
 	};
+	o.create = function(post) {
+		return $http.post('/posts.json', post).success(function(data) {
+			o.post.push(data);
+		});
+	};
 	return o;
 }]);
