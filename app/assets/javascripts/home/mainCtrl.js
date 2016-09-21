@@ -10,13 +10,14 @@ angular.module('redditplica')
       else{
         posts.create({
           title: $scope.title,
-          link: $scope.link
+          link: $scope.link,
+          upvotes: 0
         });
         $scope.title = '';
         $scope.link = '';
       }
     };
     $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
+      posts.upvote(post);
     }
   }]);
