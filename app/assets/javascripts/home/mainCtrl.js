@@ -8,12 +8,16 @@ angular.module('redditplica')
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {return;}
       else{
-        $scope.posts.push({title: $scope.title, link: $scope.link, upvotes: 0});
+        posts.create({
+          title: $scope.title,
+          link: $scope.link,
+          upvotes: 0
+        });
         $scope.title = '';
         $scope.link = '';
       }
     };
     $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
+      posts.upvote(post);
     }
   }]);
