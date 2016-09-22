@@ -1,4 +1,4 @@
-angular.module('redditplica', ['ui.router', 'templates'])
+angular.module('redditplica', ['ui.router', 'templates', 'Devise'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
