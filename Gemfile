@@ -19,6 +19,8 @@ gem 'ngannotate-rails'
 gem 'angular_rails_csrf'
 # responders gem
 gem 'responders'
+# devise
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
