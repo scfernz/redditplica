@@ -47,6 +47,11 @@ angular.module('redditplica', ['ui.router', 'templates', 'Devise'])
             $state.go('home');
           })
         }]
+      })
+      .state('users', {
+        url: '/users/{username}',
+        templateUrl: 'users/_user.html',
+        controller: 'UserCtrl'
       });
     $urlRouterProvider.otherwise('home');
 }]);
