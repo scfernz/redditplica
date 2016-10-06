@@ -1,4 +1,8 @@
 angular.module('redditplica')
-.controller('userCtrl', [
-  
-])
+
+.controller('UserCtrl', ['$scope', 'posts',
+  function($scope, posts) {
+    $scope.posts = posts.posts;
+  }
+
+]);

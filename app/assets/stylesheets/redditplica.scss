@@ -1,0 +1,64 @@
+@import 'mixins';
+
+/* Material Color Pallette */
+
+$primary-color-dark: #455A64;
+$primary-color: #607D8B;
+$primary-color-light: #CFD8DC;
+$primary-color-text: #FFFFFF;
+$accent-color: #00BCD4;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #BDBDBD;
+
+/* Global Styles */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $accent-color;
+}
+
+.nav-container {
+  background-color: $primary-color-dark;
+}
+
+.body {
+  background-color: $primary-color-light;
+}
+
+.jumbotron {
+  background-color: $primary-color;
+  color: $primary-color-text;
+}
+
+.jumbotron-spacing {
+  padding: 30px;
+}
+
+.post {
+  padding: 10px;
+  margin: 20px 0 20px 0;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: #F4F4F4;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  transition: all 250ms;
+  @include box_shadow(1);
+  &:hover {
+    @include box_shadow(3);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
