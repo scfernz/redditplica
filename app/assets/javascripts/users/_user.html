@@ -1,7 +1,7 @@
 <div class="container" ng-controller="UserCtrl">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center">
-      <div ng-repeat="post in posts">
+      <div ng-repeat="post in posts | filter: post.user.username">
         <div class="post">
           <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" ng-click="incrementUpvotes(post)"></span>
           {{post.upvotes}}

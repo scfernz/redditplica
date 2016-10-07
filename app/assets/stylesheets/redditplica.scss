@@ -10,6 +10,7 @@ $accent-color: #00BCD4;
 $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #BDBDBD;
+$link-color: #C2185B;
 
 /* Global Styles */
 
@@ -22,11 +23,25 @@ html {
 }
 
 a {
-  color: $accent-color;
+  color: $link-color;
 }
+
 
 .nav-container {
   background-color: $primary-color-dark;
+  a {
+    color: $primary-color-text;
+    text-decoration: none;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.nav .ul {
+  &:hover {
+    background-color: none;
+  }
 }
 
 .body {
@@ -40,6 +55,7 @@ a {
 
 .jumbotron-spacing {
   padding: 30px;
+  height: 200px;
 }
 
 .post {

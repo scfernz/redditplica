@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!, only: [:create, :upvote]
-  
+
   def create
     post = Post.find(params[:post_id])
     comment = post.comments.create(comment_params.merge(user_id: current_user.id))
@@ -11,6 +11,13 @@ class CommentsController < ApplicationController
     post = Post.find(params[:post_id])
     comment = post.comments.find(params[:id])
     comment.increment!(:upvotes)
+    respond_with post, comment
+  end
+
+  def downvote
+    post = Post.find(params[:post_id])
+    comment = post.comments.find(params[:id])
+    comment.decrement!(:upvotes)
     respond_with post, comment
   end
 
