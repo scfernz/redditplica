@@ -8,9 +8,18 @@
               <div class="col-sm-2 col-sm-offset-2">
                 <i class="material-icons md-48">insert_link</i>
               </div>
+              <div class="col-sm-2">
+                <p>
+                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" ng-click="incrementUpvotes(post)"></span>
+                </p>
+                <p>
+                  {{post.upvotes}}
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" ng-click="decrementUpvotes(post)"></span>
+                </p>
+              </div>
               <div class="col-sm-6">
-                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true" ng-click="incrementUpvotes(post)"></span>
-                {{post.upvotes}}
                 <a ng-show="post.link" href="{{post.link}}">
                   {{post.title}}</a>
                   <span ng-hide="post.link">{{post.title}}</span>

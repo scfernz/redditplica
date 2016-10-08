@@ -20,4 +20,7 @@ angular.module('redditplica')
     $scope.incrementUpvotes = function(post) {
       posts.upvote(post);
     }
+    $scope.decrementUpvotes = function(post) {
+      posts.downvote(post);
+    }
   }]);

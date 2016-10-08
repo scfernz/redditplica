@@ -1,4 +1,5 @@
 @import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* Material Color Pallette */
 
@@ -11,6 +12,7 @@ $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #BDBDBD;
 $link-color: #C2185B;
+$link-color-light: lighten($link-color, 10%);
 
 /* Global Styles */
 
@@ -18,12 +20,19 @@ html {
   box-sizing: border-box;
 }
 
+// body {
+//   font-family: "Roboto";
+// }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 a {
   color: $link-color;
+  &:hover {
+    color: $link-color-light;
+  }
 }
 
 
@@ -38,10 +47,9 @@ a {
   }
 }
 
-.nav .ul {
-  &:hover {
-    background-color: none;
-  }
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: $primary-color-dark;
+  text-decoration: none;
 }
 
 .body {
