@@ -1,12 +1,12 @@
 <!-- Home template -->
   <div class="container">
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
+      <div class="col-sm-8 text-center">
         <div ng-repeat="post in posts | orderBy: '-upvotes'">
           <div class="post card">
             <div class="row">
               <div class="post-type">
-                <i class="material-icons md-36">insert_link</i>
+                <i class="material-icons md-36 post-icon">insert_link</i>
               </div>
               <div class="vote-button">
                 <i class="material-icons" ng-click="incrementUpvotes(post)">keyboard_arrow_up</i>
@@ -31,9 +31,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+      <div class="col-sm-4">
         <div class="panel panel-default shadow-1">
           <div class="panel-body">
             <form ng-submit="addPost()">
