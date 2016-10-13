@@ -1,6 +1,6 @@
 .btn {
     padding: 8px 14px;
-    border: 0 none;
+    border: none;
     border-radius: 0;
     font-weight: 700;
     letter-spacing: 1px;
@@ -23,4 +23,8 @@
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}
+
+.btn-default {
+  background: #CFCFCF;
 }

@@ -10,7 +10,8 @@
 </head>
 <body ng-app="redditplica">
   <div ng-include="'nav/_nav.html'"></div>
-
+  <% flash[:notice] %>
+  <% flash[:alert] %> 
 <ui-view></ui-view>
 
 </body>
