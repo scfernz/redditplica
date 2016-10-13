@@ -4,5 +4,4 @@ angular.module('redditplica')
   function($scope, posts) {
     $scope.posts = posts.posts;
   }
-
 ]);

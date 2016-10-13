@@ -3,7 +3,9 @@ angular.module('redditplica')
 .controller('MainCtrl', [
   '$scope',
   'posts',
-  function($scope, posts){
+  '$state',
+  'Auth',
+  function($scope, posts, $state, Auth){
     $scope.posts = posts.posts;
     $scope.addPost = function() {
       if (!$scope.title || $scope.title === '') {return;}

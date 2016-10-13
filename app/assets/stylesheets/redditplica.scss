@@ -66,6 +66,10 @@ a {
   height: 200px;
 }
 
+.panel {
+  padding: 10px;
+}
+
 .post {
   padding: 10px;
   margin: 20px 0 20px 0;
@@ -79,6 +83,18 @@ a {
   color: white;
   height: 50px;
   width: 50px;
+}
+
+.post-votes {
+  font-size: 1.5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 12%;
 }
 
 .post-icon {
