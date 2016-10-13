@@ -1,28 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a reddit clone I made to get a better understanding of Angular 1.x which I had to learn for my internship. I initially started it by following a Thinkster tutorial recommended to me. Following the tutorial I implemented additional features as well as a re-design of reddit inspired by Google's Material Design.
 
-Things you may want to cover:
+Additional features:
+* Search bar
 
-* Ruby version
+* User view
 
-* System dependencies
+* Downvoting
 
-* Configuration
+* Material Re-design
 
-* Database creation
+Still being worked on:
 
-* Database initialization
+* Known bugs: Filtering for user posts not currently working, navbar not updating with log in and log out
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Only allowing posts to be upvoted or downvoted only once per user

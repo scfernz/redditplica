@@ -10,11 +10,11 @@
               </div>
               <div class="post-votes">
                 <div class="vote-button">
-                  <i class="material-icons" ng-click="incrementUpvotes(post)">keyboard_arrow_up</i>
+                  <i class="material-icons md-36" ng-click="incrementUpvotes(post)">keyboard_arrow_up</i>
                 </div>
                 {{post.upvotes}}
                 <div class="vote-button">
-                  <i class="material-icons" ng-click="decrementUpvotes(post)">keyboard_arrow_down</i>
+                  <i class="material-icons md-36" ng-click="decrementUpvotes(post)">keyboard_arrow_down</i>
                 </div>
               </div>
               <div class="card-content">
@@ -37,6 +37,12 @@
         <div class="input-group" style="margin-top: 20px;">
           <span class="input-group-addon" id="search-icon"><i class="material-icons md-18">search</i></span>
           <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
+        </div>
+        <div class="panel panel-default shadow-1">
+          <div class="panel-body">
+            <h3>Welcome!</h3>
+            <p>To post, comment, or vote please register or log in.</p>
+          </div>
         </div>
         <div class="panel panel-default shadow-1">
           <div class="panel-body">
