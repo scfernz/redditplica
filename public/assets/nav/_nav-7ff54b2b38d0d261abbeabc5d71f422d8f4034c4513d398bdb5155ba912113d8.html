@@ -1,0 +1,20 @@
+<div class="container-fluid nav-container shadow-3 z-index-3">
+<div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl">
+  <ul class="nav navbar-nav">
+    <li><a href="#/home">Home</a></li>
+    <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
+    <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
+    <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
+    <li ng-show="signedIn()"><a ng-click="logout()" href ="#/home">Log Out</a></li>
+  </ul>
+</div>
+</div>
+<div class="jumbotron jumbotron-spacing shadow-1 z-index-1">
+  <a href="#/home" style="text-decoration: none; color: #FFF;">
+  <div class="header-logo">
+    <img alt="logo" class="img-responsive pull-left" src="/assets/redditplica-logo-150x150-a893369ddcdd327cd2eea4e7407b69bc7795d812bb8ecc8b32551deb2a75d22b.png" />
+  </div>
+    <h1 style="padding-top: 15px;">Redditplica</h1>
+    <h4>A Reddit Replica</h4>
+  </a>
+</div>
